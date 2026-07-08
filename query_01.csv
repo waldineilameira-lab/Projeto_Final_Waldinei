@@ -1,0 +1,59 @@
+"EMPLOYEE_ID","FIRST_NAME","LAST_NAME","JOB_TITLE","DEPARTMENT_NAME","SALARY"
+205,"Shelley","Higgins","Accounting Manager","Accounting",12008
+206,"William","Gietz","Public Accountant","Accounting",8300
+101,"Neena","Yang","Administration Vice President","Executive",17000
+102,"Lex","Garcia","Administration Vice President","Executive",17000
+100,"Steven","King","President","Executive",24000
+112,"Jose Manuel","Urman","Accountant","Finance",7800
+111,"Ismael","Sciarra","Accountant","Finance",7700
+110,"John","Chen","Accountant","Finance",8200
+109,"Daniel","Faviet","Accountant","Finance",9000
+113,"Luis","Popp","Accountant","Finance",6900
+108,"Nancy","Gruenberg","Finance Manager","Finance",12008
+203,"Susan","Jacobs","Human Resources Representative","Human Resources",6500
+104,"Bruce","Miller","Programmer","IT",6000
+103,"Alexander","James","Programmer","IT",9000
+201,"Michael","Martinez","Marketing Manager","Marketing",13000
+202,"Pat","Davis","Marketing Representative","Marketing",6000
+204,"Hermann","Brown","Public Relations Representative","Public Relations",10000
+114,"Den","Li","Purchasing Manager","Purchasing",11000
+145,"John","Singh","Sales Manager","Sales",14000
+146,"Karen","Partners","Sales Manager","Sales",13500
+147,"Alberto","Errazuriz","Sales Manager","Sales",12000
+148,"Gerald","Cambrault","Sales Manager","Sales",11000
+149,"Eleni","Zlotkey","Sales Manager","Sales",10500
+158,"Allan","McEwen","Sales Representative","Sales",9000
+159,"Lindsey","Smith","Sales Representative","Sales",8000
+160,"Louise","Doran","Sales Representative","Sales",7500
+161,"Sarath","Sewall","Sales Representative","Sales",7000
+162,"Clara","Vishney","Sales Representative","Sales",10500
+163,"Danielle","Greene","Sales Representative","Sales",9500
+164,"Mattea","Marvins","Sales Representative","Sales",7200
+165,"David","Lee","Sales Representative","Sales",6800
+166,"Sundar","Ande","Sales Representative","Sales",6400
+167,"Amit","Banda","Sales Representative","Sales",6200
+168,"Lisa","Ozer","Sales Representative","Sales",11500
+169,"Harrison","Bloom","Sales Representative","Sales",10000
+170,"Tayler","Fox","Sales Representative","Sales",9600
+171,"William","Smith","Sales Representative","Sales",7400
+172,"Elizabeth","Bates","Sales Representative","Sales",7300
+173,"Sundita","Kumar","Sales Representative","Sales",6100
+174,"Ellen","Abel","Sales Representative","Sales",11000
+175,"Alyssa","Hutton","Sales Representative","Sales",8800
+176,"Jonathon","Taylor","Sales Representative","Sales",8600
+177,"Jack","Livingston","Sales Representative","Sales",8400
+179,"Charles","Johnson","Sales Representative","Sales",6200
+157,"Patrick","Sully","Sales Representative","Sales",9500
+156,"Janette","King","Sales Representative","Sales",10000
+155,"Oliver","Tuvault","Sales Representative","Sales",7000
+154,"Nanette","Cambrault","Sales Representative","Sales",7500
+153,"Christopher","Olsen","Sales Representative","Sales",8000
+152,"Peter","Hall","Sales Representative","Sales",9000
+151,"David","Bernstein","Sales Representative","Sales",9500
+150,"Sean","Tucker","Sales Representative","Sales",10000
+122,"Payam","Kaufling","Stock Manager","Shipping",7900
+121,"Adam","Fripp","Stock Manager","Shipping",8200
+120,"Matthew","Weiss","Stock Manager","Shipping",8000
+124,"Kevin","Mourgos","Stock Manager","Shipping",5800
+123,"Shanta","Vollman","Stock Manager","Shipping",6500
+178,"Kimberely","Grant","Sales Representative",,7000
