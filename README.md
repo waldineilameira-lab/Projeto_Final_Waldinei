@@ -150,3 +150,13 @@ Com base no que os dados mostraram, minha sugestão seria: para cargos operacion
 
 1. Clone este repositório.
 2. Instale as bibliotecas necessárias:
+3. Execute o script de análise:
+Os gráficos serão exibidos em sequência.
+4. As consultas SQL originais estão na pasta `sql/`, e podem ser rodadas diretamente no ambiente do FreeSQL (esquema HR) para reproduzir os arquivos CSV usados aqui.
+
+## Sugestões de melhoria para futuras versões
+
+- Cruzar os dados salariais com a tabela JOB_HISTORY, para entender também a evolução de salário ao longo do tempo de casa de cada funcionário.
+- Incluir o campo COMMISSION_PCT na análise, já que ele pode mudar bastante a remuneração real de cargos comerciais (Sales, por exemplo).
+- Automatizar a conexão direta ao FreeSQL a partir do próprio Python (hoje a extração é manual, via interface web), o que tornaria o processo ponta a ponta.
+- Criar um dashboard interativo (Power BI ou Streamlit) para que o time de RH possa explorar os dados sem depender de rodar o script Python.
