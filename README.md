@@ -17,7 +17,7 @@ A partir da base HR (Human Resources) do FreeSQL, o desafio era responder três 
 - Existe um padrão de remuneração relacionado à localização geográfica dos funcionários?
 - O que esses dados revelam sobre a estrutura salarial da empresa, e o que isso significa na prática para novas contratações?
 
-Para isso, desenvolvi duas consultas SQL, exportei os resultados para CSV, e conduzi uma Análise Exploratória de Dados (EDA) em Python.
+Para isso, desenvolvi duas consultas SQL, exportei os resultados para CSV, e conduzi uma Análise Exploratória de Dados (AED) em Python.
 
 ## Tabelas utilizadas
 
