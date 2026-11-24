@@ -76,55 +76,13 @@ Toda a análise foi feita com pandas, matplotlib e seaborn, e está documentada 
 Ao carregar os dois arquivos, encontrei uma pequena lacuna: 1 registro sem departamento preenchido na Query 1, e 1 sem estado preenchido na Query 2. São casos isolados que não atrapalham a análise, mas mostram que, mesmo numa base pequena, vale sempre checar antes de assumir que os dados estão completos.
 
 
-|
- Métrica
-|
- Query 1 (salário > R$5.000)
-|
- Query 2 (todos, com região)
-|
-|
----
-|
----
-|
----
-|
-|
- Registros
-|
- 58
-|
- 106
-|
-|
- Média
-|
- R$ 9.298,55
-|
- R$ 6.456,75
-|
-|
- Mediana
-|
- R$ 8.500,00
-|
- R$ 6.150,00
-|
-|
- Mínimo
-|
- R$ 5.800,00
-|
- R$ 2.100,00
-|
-|
- Máximo
-|
- R$ 24.000,00
-|
- R$ 24.000,00
-|
+| Métrica | Query 1 (salário > R$5.000) | Query 2 (todos, com região) |
+|---|---|---|
+| Registros | 58 | 106 |
+| Média | R$ 9.298,55 | R$ 6.456,75 |
+| Mediana | R$ 8.500,00 | R$ 6.150,00 |
+| Mínimo | R$ 5.800,00 | R$ 2.100,00 |
+| Máximo | R$ 24.000,00 | R$ 24.000,00 |
 
 A diferença de média entre as duas bases faz sentido: a Query 1 já parte de um piso salarial de R$5.000, enquanto a Query 2 traz o quadro completo, incluindo cargos de entrada.
 
@@ -132,11 +90,19 @@ A diferença de média entre as duas bases faz sentido: a Query 1 já parte de u
 
 **1. Os salários não seguem uma distribuição "equilibrada".** O histograma deixa isso bem visível: a maior parte dos funcionários está concentrada entre R$5.800 e R$10.000, e depois há uma cauda longa que se estica até R$24.000. É por isso que a mediana (R$8.500) fica abaixo da média (R$9.298,55) — poucos salários muito altos "puxam" a média para cima.
 
+![Distribuição de salários](docs/img/01_distribuicao_salarios.png)
+
 **2. O departamento Executive está numa liga à parte.** Com salário médio de aproximadamente R$19.300, é quase o dobro do segundo colocado (Purchasing, ~R$11.000). Não por acaso, os três outliers que encontrei via IQR pertencem exatamente a esse departamento: o President e dois Vice Presidents.
+
+![Salário por departamento](docs/img/02_salario_departamento.png)
 
 **3. A região Americas concentra tanto os extremos mais baixos quanto os mais altos.** O boxplot por região mostrou quatro pontos fora do padrão só dentro da Americas, enquanto a Europe não teve nenhum — mas, curiosamente, a Europe tem uma mediana salarial mais alta (~R$8.800 contra ~R$3.200 da Americas). Ou seja: a Americas é mais desigual internamente, mesmo tendo os salários mais altos da empresa dentro dela.
 
+![Salário por região](docs/img/03_salario_regiao.png)
+
 **4. A empresa é, na maior parte, uma pirâmide bem tradicional.** 86% dos funcionários (50 de 58) recebem até R$12.000. Apenas 5% ultrapassam R$16.000 — e são justamente os mesmos identificados como outliers. Isso reforça que a estrutura salarial tem uma base operacional ampla e um topo executivo pequeno e bem destacado.
+
+![Funcionários por faixa salarial](docs/img/04_faixas_salariais.png)
 
 ## Por que os outliers importam
 
@@ -148,11 +114,40 @@ Com base no que os dados mostraram, minha sugestão seria: para cargos operacion
 
 ## Como executar o projeto
 
-1. Clone este repositório.
-2. Instale as bibliotecas necessárias:
-3. Execute o script de análise:
-Os gráficos serão exibidos em sequência.
-4. As consultas SQL originais estão na pasta `sql/`, e podem ser rodadas diretamente no ambiente do FreeSQL (esquema HR) para reproduzir os arquivos CSV usados aqui.
+Requisitos: Python 3.10 ou superior.
+
+```bash
+# 1. Baixar o projeto
+git clone https://github.com/waldineilameira-lab/Projeto_Final_Waldinei.git
+cd Projeto_Final_Waldinei
+
+# 2. Criar e ativar o ambiente virtual
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux / macOS
+
+# 3. Instalar as dependências
+pip install -r requirements.txt
+
+# 4. Rodar a análise (os gráficos abrem em sequência)
+python analise_rh.py
+
+# ou abrir o notebook, com as saídas já registradas
+jupyter notebook analise_rh.ipynb
+```
+
+As consultas SQL originais estão na pasta [`sql/`](sql/) e podem ser rodadas no [FreeSQL](https://freesql.com/) (esquema HR) para gerar novamente os arquivos CSV da pasta `data/`.
+
+## Estrutura
+
+```
+├── sql/              # consultas SQL (salário por departamento/cargo e por região)
+├── data/             # resultados das consultas, em CSV
+├── analise_rh.py     # análise exploratória em Python
+├── analise_rh.ipynb  # mesma análise em notebook, com os gráficos
+├── docs/img/         # gráficos usados neste README
+└── requirements.txt
+```
 
 ## Sugestões de melhoria para futuras versões
 
